@@ -21,6 +21,11 @@ public class IntArray {
         if(index >= cells.length){
             cells[cells.length - 1] = value; // si index est plus grand ou égale que la taille du tableau, on insère la valeur au dernier élément
         }
+
+
+        for (int i = index + 1; i < cells.length ; i++) {
+            cells[i] = cells[i -1];
+        }
     }
 
     public int remove(int index) {
